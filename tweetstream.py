@@ -1,11 +1,6 @@
 import sys
 import json
 import tweepy
-##from pymongo import MongoClient
-##
-##client = MongoClient()
-##db = client.twitter_db
-##twitter_collection = db.tweets
 
 ckey = ""
 csecret = ""
@@ -19,10 +14,7 @@ api = tweepy.API(auth)
 
 tweets = []
 
-
-
 class MyStreamListener(tweepy.StreamListener):
-
 
     def on_status(self, status):
         print(json.dumps(status.text))
